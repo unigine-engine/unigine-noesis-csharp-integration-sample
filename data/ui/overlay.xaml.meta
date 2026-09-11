@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>b07a1e9d19644b028cfed10e5e7b2f33431799d1</guid>
+	<type>file</type>
+	<hash>bbc4c3ac6cc931d29f96c98f8c66057e18949f308b0c9a05f274b67c7fe275c3</hash>
+	<runtimes>
+		<runtime id="b07a1e9d19644b028cfed10e5e7b2f33431799d1" name="overlay.xaml" link="0"/>
+	</runtimes>
+</asset>

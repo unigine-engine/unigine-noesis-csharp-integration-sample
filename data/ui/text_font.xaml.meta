@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>f5c4103bd88278e8671471a40e5273d72d2c088f</guid>
+	<type>file</type>
+	<hash>d3c49b98a92333a18a64948f02d771e3cc1f2c79b7f2182c9433e0a0b826fa78</hash>
+	<runtimes>
+		<runtime id="f5c4103bd88278e8671471a40e5273d72d2c088f" name="text_font.xaml" link="0"/>
+	</runtimes>
+</asset>

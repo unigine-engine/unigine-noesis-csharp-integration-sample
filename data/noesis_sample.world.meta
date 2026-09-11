@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>ee7a2ec9c183adf2c45fd61cafbda3986ac9cdf0</guid>
+	<type>world</type>
+	<hash>0829a28350bcd2f66a8bb9abb14e25f4b7996dd212f20c3097dd2994a30f667c</hash>
+	<runtimes>
+		<runtime id="ee7a2ec9c183adf2c45fd61cafbda3986ac9cdf0" name="noesis_sample.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

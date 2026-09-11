@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unigine-noesis-csharp-integration-sample", "unigine-noesis-csharp-integration-sample.csproj", "{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug-Double|x64 = Debug-Double|x64
+		Release|x64 = Release|x64
+		Release-Double|x64 = Release-Double|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Debug|x64.ActiveCfg = Debug|x64
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Debug|x64.Build.0 = Debug|x64
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Debug-Double|x64.ActiveCfg = Debug-Double|x64
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Debug-Double|x64.Build.0 = Debug-Double|x64
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Release|x64.ActiveCfg = Release|x64
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Release|x64.Build.0 = Release|x64
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Release-Double|x64.ActiveCfg = Release-Double|x64
+		{88DC4785-1F0E-40DD-A1C9-40C59341C2D2}.Release-Double|x64.Build.0 = Release-Double|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {225AF1C3-FF91-4BFF-ABD1-FC197B37A224}
+	EndGlobalSection
+EndGlobal

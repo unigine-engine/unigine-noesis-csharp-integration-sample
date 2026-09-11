@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>470fd527fcb8f3fba6432f404fa31fe8b0a53b3b</guid>
+	<type>file</type>
+	<hash>d2dbf0eb0c1eb5a16b39e36f56f6ddf087fdae857a90eaa462f96dca3d92d962</hash>
+	<runtimes>
+		<runtime id="470fd527fcb8f3fba6432f404fa31fe8b0a53b3b" name="NoesisTheme.Styles.xaml" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,65 @@
+{
+    "edit_settings": {
+        "arguments": "",
+        "debug": false,
+        "microprofile_enabled": false
+    },
+    "id": "2f7e378c-738d-4b3e-953d-41e52805b8f1",
+    "project_settings": {
+        "addons": [],
+        "ai_docs": false,
+        "api": "csdnc",
+        "assets": [],
+        "build_tool": false,
+        "component_system": false,
+        "default_world": "noesis_sample",
+        "demo": "",
+        "editor_plugin": false,
+        "engine_binaries": "development",
+        "engine_plugin": false,
+        "engine_plugin_name": "",
+        "engine_plugin_vendor": "",
+        "launcher_console": true,
+        "launcher_gui": false,
+        "name": "unigine-noesis-csharp-integration-sample_lin_academic_double",
+        "plugin_name": "",
+        "plugin_vendor": "",
+        "plugins": [
+            "UnigineFbxImporter",
+            "UnigineCadImporter",
+            "UnigineGLTFImporter",
+            "UnigineFbxExporter",
+            "UnigineGeodetics",
+            "UnigineUsdExchanger"
+        ],
+        "precision": 1,
+        "project_template": [
+            "empty-dnc"
+        ],
+        "rt_generator": false,
+        "samples_pack": "",
+        "starting_world": "default",
+        "sw_distributed": false,
+        "template_id": "template_empty_csharp2.22.0_1cross",
+        "template_name": "empty_csharp",
+        "template_version": "2.22.0_1"
+    },
+    "run_settings": {
+        "app_name": "",
+        "application": "default",
+        "arguments": "",
+        "debug": false,
+        "microprofile_enabled": false,
+        "rpath": []
+    },
+    "sdk": {
+        "edition": "academic",
+        "internal_version": 59,
+        "key": "tier4_bin_linux-2.22",
+        "name": "UNIGINE 2 Academic Research",
+        "path": "",
+        "type": "bin",
+        "version": "2.22"
+    },
+    "version": "2"
+}

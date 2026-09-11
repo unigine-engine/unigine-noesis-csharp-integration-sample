@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>6200c37f33620f6728340d5a28d798ce8624a78e</guid>
+	<type>file</type>
+	<hash>993de226d9188185528456cb3ffc0a17c0e055e8bef9194944b21ec1f1a1f5eb</hash>
+	<runtimes>
+		<runtime id="6200c37f33620f6728340d5a28d798ce8624a78e" name="world.xaml" link="0"/>
+	</runtimes>
+</asset>

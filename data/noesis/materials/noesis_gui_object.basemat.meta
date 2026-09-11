@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>62ae0075cbd07a636078ef388b0e3d52994606db</guid>
+	<type>material</type>
+	<hash>07dc98a47a366ae336585532f7817c05dcc915b47786478ecda3d9fc3cf4835e</hash>
+	<runtimes>
+		<runtime id="62ae0075cbd07a636078ef388b0e3d52994606db" name="noesis_gui_object" link="0" type="5"/>
+	</runtimes>
+</asset>

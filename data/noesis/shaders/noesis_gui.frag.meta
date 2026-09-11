@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>214c4d43d25d4a331fe120ccb08a32cbc10d7a17</guid>
+	<type>file</type>
+	<hash>e8bdcb6f1cb639299083557481fdc87be37ecff63a51d3a7595e78e64548aec3</hash>
+	<runtimes>
+		<runtime id="214c4d43d25d4a331fe120ccb08a32cbc10d7a17" name="noesis_gui.frag" link="0"/>
+	</runtimes>
+</asset>

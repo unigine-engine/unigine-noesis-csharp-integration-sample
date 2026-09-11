@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>7b78e30d4824dc5c4d8ef990ec5497ed068a8824</guid>
+	<type>file</type>
+	<hash>9c8b2ce18410766271fabfffe4b3809bec0ecf2bceb693a4cea9a07c5ec77811</hash>
+	<runtimes>
+		<runtime id="7b78e30d4824dc5c4d8ef990ec5497ed068a8824" name="NoesisTheme.Fonts.xaml" link="0"/>
+	</runtimes>
+</asset>

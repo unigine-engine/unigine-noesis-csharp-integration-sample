@@ -1,0 +1,69 @@
+/* Copyright (C) 2005-2026, UNIGINE. All rights reserved. */
+
+BaseMaterial <var_prefix=var texture_prefix=tex node=ObjectExtern>
+{
+	Option transparent=2 <hidden=1>
+	Option overlap=1 <hidden=1>
+
+	State billboard = 0 <hidden=1>
+
+	Pass ambient
+	{
+		Vertex=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			STRUCT(VERTEX_IN)
+				INIT_ATTRIBUTE(float4, 0, POSITION)
+				INIT_ATTRIBUTE(float4, 1, TEXCOORD0)
+			END
+
+			STRUCT(VERTEX_OUT)
+				INIT_POSITION
+				INIT_OUT(float2, 0)
+			END
+
+			MAIN_BEGIN(VERTEX_OUT, VERTEX_IN)
+				float4 row_0 = s_transform[0];
+				float4 row_1 = s_transform[1];
+				float4 row_2 = s_transform[2];
+				#ifdef STATE_BILLBOARD
+					float3 view_center = float3(row_0.w, row_1.w, row_2.w);
+					float3 view_pos = view_center + float3(IN_ATTRIBUTE(0).xy, 0.0f);
+					OUT_POSITION = mul4(s_projection, float4(view_pos, 1.0f));
+				#else
+					float4 vertex = mul4(row_0, row_1, row_2, float4(IN_ATTRIBUTE(0).xyz, 1.0f));
+					OUT_POSITION = mul4(s_projection, vertex);
+				#endif
+				OUT_DATA(0) = IN_ATTRIBUTE(1).xy;
+
+				#ifdef IS_RENDER_FLIPPED
+					OUT_DATA(0).y = 1.0f - OUT_DATA(0).y;
+				#endif
+			MAIN_END
+		#}
+
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			INIT_TEXTURE(0, TEX_COLOR)
+
+			STRUCT(FRAGMENT_IN)
+				INIT_POSITION
+				INIT_IN(float2, 0)
+			END
+
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				float4 color = TEXTURE(TEX_COLOR, IN_DATA(0));
+				if (color.a <= EPSILON)
+					discard;
+				OUT_COLOR = color;
+			MAIN_FRAG_END
+		#}
+	}
+}
