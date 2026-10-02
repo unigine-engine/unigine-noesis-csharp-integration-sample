@@ -4,7 +4,7 @@
         "debug": false,
         "microprofile_enabled": false
     },
-    "id": "7757f16a-f84f-449f-8ef9-6e53308e6ce9",
+    "id": "7f34e53c-a34e-4b59-bc0e-1ce1f4958535",
     "project_settings": {
         "addons": [],
         "ai_docs": false,
@@ -21,7 +21,7 @@
         "engine_plugin_vendor": "",
         "launcher_console": true,
         "launcher_gui": false,
-        "name": "unigine-noesis-csharp-integration-sample_win_academic_float",
+        "name": "unigine-noesis-csharp-integration-sample",
         "plugin_name": "",
         "plugin_vendor": "",
         "plugins": [
@@ -40,9 +40,9 @@
         "samples_pack": "",
         "starting_world": "default",
         "sw_distributed": false,
-        "template_id": "template_empty_csharp2.22.0_1cross",
+        "template_id": "template_empty_csharp2.22.0_2cross",
         "template_name": "empty_csharp",
-        "template_version": "2.22.0_1"
+        "template_version": "2.22.0_2"
     },
     "run_settings": {
         "app_name": "",

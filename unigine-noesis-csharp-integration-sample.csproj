@@ -25,13 +25,20 @@
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 		<Configurations>Debug;Release;Debug-Double;Release-Double</Configurations>
 	</PropertyGroup>
+	<!-- Editor and SDK Browser only ever run `dotnet build -c Debug|Release`; they never
+	     ask for a *-Double configuration. A sample repaired for double precision has only
+	     double libraries in bin, so those two configurations have to follow it. -->
+	<PropertyGroup>
+		<UnigineBinIsDouble Condition="!Exists('$(UnigineBin)/UnigineSharp_x64.dll') And Exists('$(UnigineBin)/UnigineSharp_double_x64.dll')">true</UnigineBinIsDouble>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
 		<AssemblyName>unigine-noesis-csharp-integration-sample_x64d</AssemblyName>
 		<DebugSymbols>true</DebugSymbols>
 		<Optimize>false</Optimize>
 		<DefineConstants>TRACE;DEBUG;</DefineConstants>
+		<DefineConstants Condition="'$(UnigineBinIsDouble)' == 'true'">TRACE;DEBUG;UNIGINE_DOUBLE;</DefineConstants>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)'=='Debug'">
+	<ItemGroup Condition="'$(Configuration)'=='Debug' And '$(UnigineBinIsDouble)' != 'true'">
 		<Reference Include="UnigineSharp_x64d">
 			<SpecificVersion>false</SpecificVersion>
 			<HintPath>$(UnigineBin)\UnigineSharp_x64d.dll</HintPath>
@@ -45,7 +52,7 @@
 		<Optimize>false</Optimize>
 		<DefineConstants>TRACE;DEBUG;UNIGINE_DOUBLE;</DefineConstants>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)'=='Debug-Double'">
+	<ItemGroup Condition="'$(Configuration)'=='Debug-Double' Or ('$(Configuration)'=='Debug' And '$(UnigineBinIsDouble)' == 'true')">
 		<Reference Include="UnigineSharp_double_x64d">
 			<SpecificVersion>false</SpecificVersion>
 			<HintPath>$(UnigineBin)\UnigineSharp_double_x64d.dll</HintPath>
@@ -57,8 +64,9 @@
 		<AssemblyName>unigine-noesis-csharp-integration-sample_x64</AssemblyName>
 		<Optimize>true</Optimize>
 		<DefineConstants>TRACE;NDEBUG;</DefineConstants>
+		<DefineConstants Condition="'$(UnigineBinIsDouble)' == 'true'">TRACE;NDEBUG;UNIGINE_DOUBLE;</DefineConstants>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)'=='Release'">
+	<ItemGroup Condition="'$(Configuration)'=='Release' And '$(UnigineBinIsDouble)' != 'true'">
 		<Reference Include="UnigineSharp_x64">
 			<SpecificVersion>false</SpecificVersion>
 			<HintPath>$(UnigineBin)\UnigineSharp_x64.dll</HintPath>
@@ -71,7 +79,7 @@
 		<Optimize>true</Optimize>
 		<DefineConstants>TRACE;NDEBUG;UNIGINE_DOUBLE;</DefineConstants>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)'=='Release-Double'">
+	<ItemGroup Condition="'$(Configuration)'=='Release-Double' Or ('$(Configuration)'=='Release' And '$(UnigineBinIsDouble)' == 'true')">
 		<Reference Include="UnigineSharp_double_x64">
 			<SpecificVersion>false</SpecificVersion>
 			<HintPath>$(UnigineBin)\UnigineSharp_double_x64.dll</HintPath>
@@ -80,9 +88,6 @@
 		<UnigineSharpLibPath Include="$(UnigineBin)\UnigineSharp_double_x64.dll"/>
 	</ItemGroup>
 
-	<PropertyGroup Condition="'$(Configuration)' == 'Debug-Double' or '$(Configuration)' == 'Release-Double'">
-		<AssemblyName>$(AssemblyName.Replace('_x64', '_double_x64'))</AssemblyName>
-	</PropertyGroup>
 	<ItemGroup>
 		<Compile Include="source\AppSystemLogic.cs" />
 		<Compile Include="source\AppWorldLogic.cs" />
